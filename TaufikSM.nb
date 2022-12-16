@@ -1,0 +1,484 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22672,        476]
+NotebookOptionsPosition[     22210,        459]
+NotebookOutlinePosition[     22589,        475]
+CellTagsIndexPosition[     22546,        472]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Gerak Harmonik", "Title",
+ CellChangeTimes->{{3.8193173222385025`*^9, 3.8193174286995173`*^9}, {
+   3.819317730285584*^9, 3.8193178291334887`*^9}, {3.81931787993049*^9, 
+   3.8193180472022038`*^9}, {3.819318077480142*^9, 3.819318136771854*^9}, {
+   3.8193182404197197`*^9, 3.8193182413947926`*^9}, {3.8193182818121605`*^9, 
+   3.8193185203049994`*^9}, {3.81931855065145*^9, 3.819318561973692*^9}, {
+   3.819318627389284*^9, 3.8193186491727986`*^9}, {3.819318825756854*^9, 
+   3.819318841342685*^9}, {3.819318908098748*^9, 3.8193189172132306`*^9}, {
+   3.81933628354161*^9, 3.8193363546639214`*^9}, {3.819336775239826*^9, 
+   3.8193368499764013`*^9}, {3.819336880270671*^9, 3.819336903739419*^9}, {
+   3.819336939595091*^9, 3.819336941936265*^9}, {3.819336973239603*^9, 
+   3.8193369957092867`*^9}, {3.8193383408542824`*^9, 3.8193383433854694`*^9}, 
+   3.8193383842715373`*^9, {3.819339131421601*^9, 3.819339187288776*^9}, {
+   3.819339252642641*^9, 3.81933929502281*^9}, {3.8193393252380805`*^9, 
+   3.8193393257721014`*^9}, {3.819339363364912*^9, 3.8193393844944754`*^9}, {
+   3.819339484100897*^9, 3.8193395224317837`*^9}, 3.8193418980846252`*^9, {
+   3.8193421493606367`*^9, 3.8193421582710037`*^9}, {3.8193421938436966`*^9, 
+   3.8193421960407443`*^9}, {3.8193422962261114`*^9, 3.8193423160071754`*^9}, 
+   3.819342503475629*^9, {3.8193425524595337`*^9, 3.819342553175577*^9}, {
+   3.8193425946627226`*^9, 3.8193426276818285`*^9}, {3.81934949690129*^9, 
+   3.819349497534317*^9}, {3.819349938605589*^9, 3.8193500080667405`*^9}, {
+   3.8193500429743075`*^9, 3.8193500548031855`*^9}, {3.819350104711904*^9, 
+   3.8193501321549587`*^9}, {3.8193503391429973`*^9, 3.819350346409552*^9}, {
+   3.8193504289150934`*^9, 3.8193504329333925`*^9}, {3.81939984865806*^9, 
+   3.819399886535513*^9}, {3.8194000134924803`*^9, 3.8194001162571173`*^9}, {
+   3.8194003527516437`*^9, 3.8194003538847475`*^9}, {3.8194003868131676`*^9, 
+   3.819400557174376*^9}, {3.819400679868472*^9, 3.8194007330114374`*^9}, {
+   3.819402631458932*^9, 3.8194027380148697`*^9}, {3.8194028012405734`*^9, 
+   3.819402821961111*^9}, {3.81940342133435*^9, 3.819403429477955*^9}, {
+   3.81940351149905*^9, 3.8194035205167246`*^9}, {3.8194035702674336`*^9, 
+   3.8194035819953012`*^9}, {3.819403898114786*^9, 3.81940391071474*^9}, {
+   3.8194039724292994`*^9, 3.8194039951479964`*^9}, {3.819404052990314*^9, 
+   3.8194040854347544`*^9}, 3.819404135246445*^9, 3.8194041786226783`*^9, {
+   3.819404560522973*^9, 3.8194046761165705`*^9}, 3.819404771279609*^9, 
+   3.8194048049491267`*^9, {3.8194048919666014`*^9, 3.8194049460636272`*^9}, {
+   3.81940508489762*^9, 3.819405158779107*^9}, {3.8194051980380306`*^9, 
+   3.8194053456599717`*^9}, {3.819405375900224*^9, 3.819405395892711*^9}, {
+   3.8194054698262258`*^9, 3.8194055050668383`*^9}, {3.8194058282418613`*^9, 
+   3.8194060105450277`*^9}, {3.8194060411682997`*^9, 
+   3.8194060482018237`*^9}, {3.819406840192448*^9, 3.819406855004526*^9}, {
+   3.8801853883693547`*^9, 
+   3.8801854048415956`*^9}},ExpressionUUID->"42cdf3e0-b207-41bf-92ab-\
+b3c00f969d45"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`AA$$ = 0.2, $CellContext`bb$$ = 
+    2, $CellContext`kk$$ = 2, $CellContext`mm$$ = 2, $CellContext`plottype$$ =
+     "Posisi", $CellContext`time$$ = 49.99900099999991, $CellContext`xinit$$ =
+     0.8, $CellContext`zoom$$ = 10, $CellContext`\[Omega]\[Omega]$$ = 2, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`mm$$], 2, "Massa"}, 1, 10, 0.01}, {{
+       Hold[$CellContext`kk$$], 2, "Konstanta Pegas"}, 0.1, 10, 0.01}, {{
+       Hold[$CellContext`bb$$], 2, "Redaman"}, -5, 5, 0.01}, {{
+       Hold[$CellContext`xinit$$], 0.8, "Posisi Awal"}, 0.1, 1}, {
+      Hold["Gaya Luar"], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`AA$$], 0.2, "Amplitudo"}, 0, 1, 0.01}, {{
+       Hold[$CellContext`\[Omega]\[Omega]$$], 2, "Frekunsi"}, 0, 2 Pi, 
+      0.01}, {{
+       Hold[$CellContext`plottype$$], "Posisi", "Grafik"}, {
+      "Posisi", "Fase"}}, {{
+       Hold[$CellContext`zoom$$], 10, "Zoom"}, 0.5, 20}, {{
+       Hold[$CellContext`time$$], 
+       Rational[1, 1000000], "Time"}, 
+      Rational[1, 1000], 50}}, Typeset`size$$ = {528., {178.5, 184.5}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`mm$124101$$ = 0, $CellContext`kk$124102$$ = 
+    0, $CellContext`bb$124103$$ = 0, $CellContext`xinit$124104$$ = 
+    0, $CellContext`AA$124105$$ = 0, $CellContext`\[Omega]\[Omega]$124106$$ = 
+    0, $CellContext`plottype$124107$$ = False, $CellContext`zoom$124108$$ = 
+    0, $CellContext`time$124109$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`AA$$ = 0.2, $CellContext`bb$$ = 
+        2, $CellContext`kk$$ = 2, $CellContext`mm$$ = 
+        2, $CellContext`plottype$$ = "Posisi", $CellContext`time$$ = 
+        Rational[1, 1000000], $CellContext`xinit$$ = 0.8, $CellContext`zoom$$ = 
+        10, $CellContext`\[Omega]\[Omega]$$ = 2}, "ControllerVariables" :> {
+        Hold[$CellContext`mm$$, $CellContext`mm$124101$$, 0], 
+        Hold[$CellContext`kk$$, $CellContext`kk$124102$$, 0], 
+        Hold[$CellContext`bb$$, $CellContext`bb$124103$$, 0], 
+        Hold[$CellContext`xinit$$, $CellContext`xinit$124104$$, 0], 
+        Hold[$CellContext`AA$$, $CellContext`AA$124105$$, 0], 
+        Hold[$CellContext`\[Omega]\[Omega]$$, \
+$CellContext`\[Omega]\[Omega]$124106$$, 0], 
+        Hold[$CellContext`plottype$$, $CellContext`plottype$124107$$, False], 
+        Hold[$CellContext`zoom$$, $CellContext`zoom$124108$$, 0], 
+        Hold[$CellContext`time$$, $CellContext`time$124109$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Column[{
+          Switch[$CellContext`plottype$$, "Posisi", 
+           $CellContext`DPPlot[$CellContext`bb$$, $CellContext`mm$$, \
+$CellContext`kk$$, $CellContext`xinit$$, $CellContext`AA$$, $CellContext`\
+\[Omega]\[Omega]$$, $CellContext`time$$], "Fase", 
+           $CellContext`DPPhasePlot[$CellContext`bb$$, $CellContext`mm$$, \
+$CellContext`kk$$, $CellContext`xinit$$, $CellContext`AA$$, $CellContext`\
+\[Omega]\[Omega]$$, $CellContext`zoom$$, $CellContext`time$$]], 
+          Style[
+           Row[{"Massa = ", $CellContext`mm$$, 
+             Spacer[20], "|", 
+             Spacer[20], "Konstanta Pegas = ", $CellContext`kk$$, 
+             Spacer[20], "|", 
+             Spacer[30], "Redaman = ", $CellContext`bb$$}], "Label"], 
+          Style[
+           Row[{"Amplitudo = ", $CellContext`AA$$, 
+             Spacer[20], "|", 
+             Spacer[20], "Frekuensi = ", $CellContext`\[Omega]\[Omega]$$}], 
+           "Label"]}, Center] If[
+         Or[$CellContext`AA$$ > 0, $CellContext`\[Omega]\[Omega]$$ > 0], 
+         Graphics[{
+           Part[
+            
+            ParametricPlot[{
+             0.5 + 0.1 Sin[8 $CellContext`x], (-($CellContext`x/(2 Pi))) (
+               1 + ((1/$CellContext`mm$$) (1/
+                  Sqrt[($CellContext`\[Omega]\[Omega]$$^2 - \
+($CellContext`kk$$/$CellContext`mm$$)^2)^2 + (
+                    4 (($CellContext`bb$$/
+                    2) $CellContext`mm$$)^2 + \
+($CellContext`kk$$/$CellContext`mm$$)^2)])) 
+                Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$])}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> 
+             Directive[Thick, 
+               GrayLevel[0.2]], Axes -> None, AspectRatio -> 1, ImageSize -> 
+             1.08 {112, 350}, Axes -> False], 1], 
+           ColorData["HTML", "SlateBlue"], Axes -> False, 
+           EdgeForm[Black], 
+           
+           Rectangle[{
+            0.3, -0.9 - ((1/$CellContext`mm$$) (1/
+               Sqrt[($CellContext`\[Omega]\[Omega]$$^2 - \
+($CellContext`kk$$/$CellContext`mm$$)^2)^2 + (
+                 4 (($CellContext`bb$$/
+                    2) $CellContext`mm$$)^2 + \
+($CellContext`kk$$/$CellContext`mm$$)^2)])) 
+             Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}, {
+            0.7, -1.1 - ((1/$CellContext`mm$$) (1/
+               Sqrt[($CellContext`\[Omega]\[Omega]$$^2 - \
+($CellContext`kk$$/$CellContext`mm$$)^2)^2 + (
+                 4 (($CellContext`bb$$/
+                    2) $CellContext`mm$$)^2 + \
+($CellContext`kk$$/$CellContext`mm$$)^2)])) 
+             Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}]}, Frame -> True, PlotRange -> {0, -2}, ImageSize -> 
+          1.08 {112, 280}, Axes -> False, FrameTicks -> None], 
+         If[$CellContext`bb$$ == 0, 
+          Graphics[{
+            Part[
+             
+             ParametricPlot[{
+              0.5 + 0.1 Sin[8 $CellContext`x], (-($CellContext`x/(2 Pi))) (1 + 
+                Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$])}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> 
+              Directive[Thick, 
+                GrayLevel[0.2]], Axes -> None, AspectRatio -> 1, ImageSize -> 
+              1.08 {112, 350}, Axes -> False], 1], 
+            ColorData["HTML", "SlateBlue"], Axes -> False, 
+            EdgeForm[Black], 
+            
+            Rectangle[{
+             0.3, -0.9 - Sin[
+              Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}, {
+             0.7, -1.1 - Sin[
+              Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}]}, Frame -> True, PlotRange -> {0, -2}, ImageSize -> 
+           1.08 {112, 280}, Axes -> False, FrameTicks -> None], 
+          
+          If[$CellContext`bb$$^2 - (4 $CellContext`kk$$) $CellContext`mm$$ > 
+           0, 
+           Graphics[{
+             Part[
+              
+              ParametricPlot[{
+               0.5 + 0.1 Sin[8 $CellContext`x], (-($CellContext`x/(2 Pi))) (1 + 
+                 E^(-($CellContext`bb$$/(2 $CellContext`mm$$))) 
+                  E^((($CellContext`bb$$/(2 $CellContext`mm$$))^2 - 
+                    Sqrt[$CellContext`kk$$/$CellContext`mm$$]^2)^($\
+CellContext`time$$/2)))}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> 
+               Directive[Thick, 
+                 GrayLevel[0.2]], Axes -> None, AspectRatio -> 1, ImageSize -> 
+               1.08 {112, 350}, Axes -> False], 1], 
+             ColorData["HTML", "SlateBlue"], Axes -> False, 
+             EdgeForm[Black], 
+             
+             Rectangle[{
+              0.3, -0.9 - E^(-($CellContext`bb$$/(2 $CellContext`mm$$))) 
+               E^((($CellContext`bb$$/(2 $CellContext`mm$$))^2 - 
+                  Sqrt[$CellContext`kk$$/$CellContext`mm$$]^2)^($CellContext`\
+time$$/2))}, {
+              0.7, -1.1 - E^(-($CellContext`bb$$/(2 $CellContext`mm$$))) 
+               E^((($CellContext`bb$$/(2 $CellContext`mm$$))^2 - 
+                  Sqrt[$CellContext`kk$$/$CellContext`mm$$]^2)^($CellContext`\
+time$$/2))}]}, Frame -> True, PlotRange -> {0, -2}, ImageSize -> 
+            1.08 {112, 280}, Axes -> False, FrameTicks -> None], 
+           
+           If[$CellContext`bb$$^2 - (4 $CellContext`kk$$) $CellContext`mm$$ < 
+            0, 
+            Graphics[{
+              Part[
+               
+               ParametricPlot[{
+                0.5 + 0.1 Sin[8 $CellContext`x], (-($CellContext`x/(2 Pi))) (
+                  1 + 
+                  E^((-($CellContext`bb$$/(
+                    2 $CellContext`mm$$))) $CellContext`time$$) 
+                   Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$])}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> 
+                Directive[Thick, 
+                  GrayLevel[0.2]], Axes -> None, AspectRatio -> 1, ImageSize -> 
+                1.08 {112, 350}, Axes -> False], 1], 
+              ColorData["HTML", "SlateBlue"], Axes -> False, 
+              EdgeForm[Black], 
+              
+              Rectangle[{
+               0.3, -0.9 - 
+                E^((-($CellContext`bb$$/(
+                    2 $CellContext`mm$$))) $CellContext`time$$) 
+                Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}, {
+               0.7, -1.1 - 
+                E^((-($CellContext`bb$$/(
+                    2 $CellContext`mm$$))) $CellContext`time$$) 
+                Sin[Sqrt[$CellContext`kk$$/$CellContext`mm$$] \
+$CellContext`time$$]}]}, Frame -> True, PlotRange -> {0, -2}, ImageSize -> 
+             1.08 {112, 280}, Axes -> False, FrameTicks -> None], 
+            Graphics[{
+              Part[
+               
+               ParametricPlot[{
+                0.5 + 0.1 Sin[8 $CellContext`x], (-($CellContext`x/(2 Pi))) (
+                  1 + E^((-($CellContext`bb$$/(
+                    2 $CellContext`mm$$))) ($CellContext`time$$ + 
+                    1)))}, {$CellContext`x, 0, 2 Pi}, PlotStyle -> 
+                Directive[Thick, 
+                  GrayLevel[0.2]], Axes -> None, AspectRatio -> 1, ImageSize -> 
+                1.08 {112, 350}, Axes -> False], 1], 
+              ColorData["HTML", "SlateBlue"], Axes -> False, 
+              EdgeForm[Black], 
+              
+              Rectangle[{
+               0.3, -0.9 - 
+                E^((-($CellContext`bb$$/(
+                   2 $CellContext`mm$$))) ($CellContext`time$$ + 1))}, {
+               0.7, -1.1 - 
+                E^((-($CellContext`bb$$/(
+                   2 $CellContext`mm$$))) ($CellContext`time$$ + 1))}]}, 
+             Frame -> True, PlotRange -> {0, -2}, ImageSize -> 
+             1.08 {112, 280}, Axes -> False, FrameTicks -> None]]]]], 
+      "Specifications" :> {{{$CellContext`mm$$, 2, "Massa"}, 1, 10, 0.01, 
+         ImageSize -> Tiny}, {{$CellContext`kk$$, 2, "Konstanta Pegas"}, 0.1, 
+         10, 0.01, ImageSize -> Tiny}, {{$CellContext`bb$$, 2, "Redaman"}, -5,
+          5, 0.01, ImageSize -> 
+         Tiny}, {{$CellContext`xinit$$, 0.8, "Posisi Awal"}, 0.1, 1, 
+         ImageSize -> Tiny}, Delimiter, 
+        "Gaya Luar", {{$CellContext`AA$$, 0.2, "Amplitudo"}, 0, 1, 0.01, 
+         ImageSize -> 
+         Tiny}, {{$CellContext`\[Omega]\[Omega]$$, 2, "Frekunsi"}, 0, 2 Pi, 
+         0.01, ImageSize -> Tiny}, 
+        Delimiter, {{$CellContext`plottype$$, "Posisi", "Grafik"}, {
+         "Posisi", "Fase"}}, {{$CellContext`zoom$$, 10, "Zoom"}, 0.5, 20, 
+         ImageSize -> Tiny, Enabled -> 
+         Dynamic[$CellContext`plottype$$ == "Fase"]}, 
+        Delimiter, {{$CellContext`time$$, 
+          Rational[1, 1000000], "Time"}, 
+         Rational[1, 1000], 50, ControlType -> Trigger, DefaultDuration -> 
+         Rational[1, 1000], DisplayAllSteps -> True, AnimationRate -> 2}}, 
+      "Options" :> {
+       AutorunSequencing -> {2, 3, 5}, ControllerLinking -> True}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{738., {209., 215.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`DPPlot[
+         Pattern[$CellContext`bb, 
+          Blank[]], 
+         Pattern[$CellContext`mm, 
+          Blank[]], 
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`xinit, 
+          Blank[]], 
+         Pattern[$CellContext`AA, 
+          Blank[]], 
+         Pattern[$CellContext`\[Omega]\[Omega], 
+          Blank[]], 
+         Pattern[$CellContext`tfinal, 
+          Blank[]]] := 
+       Module[{}, 
+         Clear[$CellContext`t, $CellContext`x, $CellContext`A, $CellContext`\
+\[Omega], $CellContext`k, $CellContext`b, $CellContext`m]; 
+         With[{$CellContext`sol = First[
+              
+              NDSolve[{
+               Derivative[
+                  2][$CellContext`x][$CellContext`t] + \
+($CellContext`bb/$CellContext`mm) 
+                  Derivative[
+                   1][$CellContext`x][$CellContext`t] + \
+($CellContext`kk/$CellContext`mm) $CellContext`x[$CellContext`t] == \
+($CellContext`AA/$CellContext`mm) 
+                 Cos[$CellContext`\[Omega]\[Omega] $CellContext`t], 
+                Derivative[1][$CellContext`x][0] == 
+                0, $CellContext`x[
+                 0] == $CellContext`xinit}, $CellContext`x, {$CellContext`t, 
+                0, $CellContext`tfinal}]]}, 
+           Plot[
+            Evaluate[
+             ReplaceAll[
+              $CellContext`x[$CellContext`t], $CellContext`sol]], \
+{$CellContext`t, 0, $CellContext`tfinal}, 
+            PlotRange -> {{0, $CellContext`tfinal}, {-1, 1}}, 
+            ImageSize -> {425, 350}, ImagePadding -> {{35, 35}, {20, 40}}, 
+            AxesLabel -> {
+              Style["t", 14, Bold, Italic], 
+              Style["x(t)", 14, Italic, Bold]}, PlotLabel -> If[
+              Or[$CellContext`AA > 0, $CellContext`\[Omega]\[Omega] > 0], 
+              Style[
+               Column[{"Gerak Harmonik Teredam Terpaksa", 
+                 Spacer[30], 
+                 
+                 TraditionalForm[$CellContext`m 
+                    Derivative[
+                    2][$CellContext`x][$CellContext`t] + $CellContext`c 
+                    Derivative[
+                    1][$CellContext`x][$CellContext`t] + $CellContext`k \
+$CellContext`x[$CellContext`t] == $CellContext`A 
+                   Cos[$CellContext`\[Omega] $CellContext`t]]}]], 
+              If[$CellContext`bb == 0, 
+               Style[
+                Column[{"Gerak Harmonik Sederhana", 
+                  Spacer[30], 
+                  
+                  TraditionalForm[$CellContext`m 
+                    Derivative[
+                    2][$CellContext`x][$CellContext`t] + $CellContext`k \
+$CellContext`x[$CellContext`t] == 0]}]], 
+               If[$CellContext`bb^2 - (4 $CellContext`kk) $CellContext`mm > 0, 
+                Style[
+                 Column[{"Gerak Harmonik Over Damped", 
+                   Spacer[30], 
+                   
+                   TraditionalForm[$CellContext`m 
+                    Derivative[
+                    2][$CellContext`x][$CellContext`t] + $CellContext`c 
+                    Derivative[
+                    1][$CellContext`x][$CellContext`t] + $CellContext`k \
+$CellContext`x[$CellContext`t] == 0]}]], 
+                
+                If[$CellContext`bb^2 - (4 $CellContext`kk) $CellContext`mm < 
+                 0, 
+                 Style[
+                  Column[{"Gerak Harmonik Under Damped", 
+                    Spacer[30], 
+                    
+                    TraditionalForm[$CellContext`m 
+                    Derivative[
+                    2][$CellContext`x][$CellContext`t] + $CellContext`c 
+                    Derivative[
+                    1][$CellContext`x][$CellContext`t] + $CellContext`k \
+$CellContext`x[$CellContext`t] == 0]}]], 
+                 Style[
+                  Column[{"Gerak Harmonik Critically Damped", 
+                    Spacer[30], 
+                    
+                    TraditionalForm[$CellContext`m 
+                    Derivative[
+                    2][$CellContext`x][$CellContext`t] + $CellContext`c 
+                    Derivative[
+                    1][$CellContext`x][$CellContext`t] + $CellContext`k \
+$CellContext`x[$CellContext`t] == 0]}]]]]]]]]], 
+       Attributes[Derivative] = {NHoldAll, ReadProtected}, 
+       Attributes[PlotRange] = {ReadProtected}, $CellContext`DPPhasePlot[
+         Pattern[$CellContext`bb, 
+          Blank[]], 
+         Pattern[$CellContext`mm, 
+          Blank[]], 
+         Pattern[$CellContext`kk, 
+          Blank[]], 
+         Pattern[$CellContext`xinit, 
+          Blank[]], 
+         Pattern[$CellContext`AA, 
+          Blank[]], 
+         Pattern[$CellContext`\[Omega]\[Omega], 
+          Blank[]], 
+         Pattern[$CellContext`zoom, 
+          Blank[]], 
+         Pattern[$CellContext`tfinal, 
+          Blank[]]] := Module[{$CellContext`x, $CellContext`t}, 
+         With[{$CellContext`sol = First[
+             
+             NDSolve[{
+              Derivative[
+                 2][$CellContext`x][$CellContext`t] + \
+($CellContext`bb/$CellContext`mm) 
+                 Derivative[
+                  1][$CellContext`x][$CellContext`t] + \
+($CellContext`kk/$CellContext`mm) $CellContext`x[$CellContext`t] == \
+($CellContext`AA/$CellContext`mm) 
+                Cos[$CellContext`\[Omega]\[Omega] $CellContext`t], 
+               Derivative[1][$CellContext`x][0] == 
+               0, $CellContext`x[
+                0] == $CellContext`xinit}, $CellContext`x, {$CellContext`t, 
+               0, $CellContext`tfinal}]]}, 
+          ParametricPlot[{
+            Evaluate[
+             ReplaceAll[
+              $CellContext`x[$CellContext`t], $CellContext`sol]], 
+            Evaluate[
+             ReplaceAll[
+              Derivative[
+              1][$CellContext`x][$CellContext`t], $CellContext`sol]]}, \
+{$CellContext`t, 0, $CellContext`tfinal}, 
+           PlotRange -> {{-$CellContext`zoom, $CellContext`zoom}, \
+{-$CellContext`zoom, $CellContext`zoom}}, ImageSize -> {425, 350}, AxesLabel -> {
+             Style["x(t)", 14, Italic, Bold], 
+             Style["x'(t)", Italic, 14, Bold]}]]]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8194070590197887`*^9, 
+  3.8194255133639975`*^9},ExpressionUUID->"f44d022a-0282-48f9-8e35-\
+463b35d84ad2"]
+}, Open  ]]
+},
+WindowSize->{1280, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>0.95 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3074, 42, 93, "Title",ExpressionUUID->"42cdf3e0-b207-41bf-92ab-b3c00f969d45"],
+Cell[3657, 66, 18537, 390, 442, "Output",ExpressionUUID->"f44d022a-0282-48f9-8e35-463b35d84ad2"]
+}, Open  ]]
+}
+]
+*)
+
