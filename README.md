@@ -1,1 +1,3 @@
-# Mekanika-20
+# Harmonic Oscillation
+
+Modeling simple and damped harmonic motion using Mathematica
